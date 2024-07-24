@@ -1,0 +1,93 @@
+/* Minimal CSS with Background Image and Enhanced Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHBlcnNvbiUyMHNpdHRpbmclMjBvbiUyMGxhcHRvcHxlbnwwfHx8fDE2ODk4MzAxMzA&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-header {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effects for list items */
+.list-group-item:hover {
+    background-color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004080;
+}
+
+#bookingConfirmation {
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+}
+
+.available-rooms .card-header {
+    background-color: #17a2b8;
+}
+
+.book-room .card-header {
+    background-color: #28a745;
+}
+
+/* Added hover effect for list items in the "Book a Room" card */
+.book-room .list-group-item:hover {
+    background-color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.your-bookings .card-header {
+    background-color: #ffc107;
+}
+
+/* Adding margin to the first column card */
+.col-md-6 .card {
+    margin-bottom: 30px;
+    /* Adjust the value as needed */
+}
+
+/* Adding hover effects */
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
