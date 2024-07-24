@@ -6,21 +6,19 @@ document.getElementById('bookRoomButton').addEventListener('click', function() {
     const meetingTitle = document.getElementById('meetingTitle').value;
 
     if (date && startTime && endTime && meetingTitle) {
-        const bookingItem = `${room} on ${date} from ${startTime} to ${endTime} (${meetingTitle})`;
+        const tableBody = document.getElementById('bookingsTable').getElementsByTagName('tbody')[0];
+                const newRow = tableBody.insertRow();
+                newRow.insertCell().textContent = meetingTitle;
+                newRow.insertCell().textContent = date;
+                newRow.insertCell().textContent = startTime;
+                newRow.insertCell().textContent = endTime;
 
-        // Add to bookings list
-        const listItem = document.createElement('li');
-        listItem.className = 'list-group-item';
-        listItem.textContent = bookingItem;
-        document.getElementById('bookingsList').appendChild(listItem);
-
-        // Show booking confirmation message
-        const confirmationMessage = document.createElement('div');
-        confirmationMessage.className = 'alert alert-success';
-        confirmationMessage.textContent = `Your booking for ${bookingItem} has been confirmed!`;
-        document.getElementById('bookingConfirmation').innerHTML = '';
-        document.getElementById('bookingConfirmation').appendChild(confirmationMessage);
-
+                // Show booking confirmation message
+                const confirmationMessage = document.createElement('div');
+                confirmationMessage.className = 'alert alert-success';
+                confirmationMessage.textContent = `Your booking for "${meetingTitle}" on ${date} from ${startTime} to ${endTime} has been confirmed!`;
+                document.getElementById('bookingConfirmation').innerHTML = '';
+                document.getElementById('bookingConfirmation').appendChild(confirmationMessage);
         // Update available rooms
         const roomsList = document.getElementById('roomsList').children;
         for (let i = 0; i < roomsList.length; i++) {
